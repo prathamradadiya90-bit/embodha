@@ -1,0 +1,5 @@
+"Type","Number","Date","Against invoice","Buyer's state","Place of supply","State code","Currency","Taxable value","CGST","SGST/UTGST","IGST","Total","Value in rupees","Refunded since"
+"Invoice","EMB/26-27/000001","2026-10-22","","Karnataka (29)","Karnataka (29)","29","INR","846.61","76.19","76.20","0.00","999.00","999.00",""
+"Invoice","EMB/26-27/000002","2026-10-22","","Maharashtra (27)","Maharashtra (27)","27","INR","422.88","0.00","0.00","76.12","499.00","499.00","yes"
+"Invoice","EMB/26-27/000003","2026-10-22","","","Outside India (96)","96","USD","12.00","0.00","0.00","0.00","12.00","1056.00",""
+"Credit note","CN/26-27/000001","2026-10-22","EMB/26-27/000002","Maharashtra (27)","Maharashtra (27)","27","INR","422.88","0.00","0.00","76.12","499.00","499.00",""

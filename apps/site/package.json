@@ -1,0 +1,17 @@
+{
+  "name": "@embodha/site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Embodha's public website: home, privacy policy, terms, refunds, account deletion and support. Plain HTML and CSS.",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:release": "node build.mjs --release",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/anton": "^5.2.6",
+    "@fontsource/dm-sans": "^5.2.6",
+    "@fontsource/italiana": "^5.2.6"
+  }
+}

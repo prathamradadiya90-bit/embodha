@@ -1,0 +1,18 @@
+{
+  "companyName": "",
+  "address": "",
+  "supportEmail": "",
+  "supportPhone": "",
+  "grievanceOfficer": "",
+  "grievanceEmail": "",
+  "siteUrl": "",
+  "city": "",
+  "emailProvider": "",
+  "hostingRegion": "",
+  "backupDays": "",
+  "effectiveDate": "",
+  "refundWindowDays": "7",
+  "appStoreUrl": "",
+  "playStoreUrl": "",
+  "webAppUrl": ""
+}

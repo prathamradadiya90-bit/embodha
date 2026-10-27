@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <meta name="description" content="{{description}}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to the content</a>
+  <header class="top">
+    <a class="brand" href="/"><span class="star" aria-hidden="true"></span><span>embodha</span></a>
+    <nav aria-label="Site">
+      <a href="/privacy/">Privacy</a>
+      <a href="/terms/">Terms</a>
+      <a href="/refunds/">Refunds</a>
+      <a href="/support/">Help</a>
+    </nav>
+  </header>
+  <main id="main">
+{{content}}
+  </main>
+  <footer class="bottom">
+    <div>
+      <strong>{{companyName}}</strong><br>
+      {{address}}<br>
+      <a href="mailto:{{href:supportEmail}}">{{supportEmail}}</a><br>
+      <a href="{{tel:supportPhone}}">{{supportPhone}}</a>
+    </div>
+    <nav aria-label="Policies">
+      <a href="/pricing/">Pricing</a>
+      <a href="/privacy/">Privacy policy</a>
+      <a href="/terms/">Terms of use</a>
+      <a href="/refunds/">Refunds and cancellations</a>
+      <a href="/shipping/">Shipping and delivery</a>
+      <a href="/delete-account/">Delete your account</a>
+      <a href="/support/">Help and contact</a>
+    </nav>
+    <p class="small">© {{year}} {{companyName}}. Embodha is not a medical service.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+# Local development.
+#   docker compose up -d db                  Postgres on localhost:5432 for `npm run dev`
+#   docker compose --profile api up --build  also runs the API container the way the VPS will
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: embodha
+      POSTGRES_PASSWORD: embodha
+      POSTGRES_DB: embodha
+    ports: ["5432:5432"]
+    volumes: [db-data:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U embodha"]
+      interval: 5s
+      retries: 10
+
+  api:
+    profiles: [api]
+    build: ./apps/api
+    env_file: ./apps/api/.env
+    environment:
+      DATABASE_URL: postgres://embodha:embodha@db:5432/embodha
+    ports: ["3000:3000"]
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db-data:
