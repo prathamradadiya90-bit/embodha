@@ -223,6 +223,8 @@ export class AuthService {
 
   private isReviewAccount(email: string) {
     const { REVIEW_ACCOUNT_EMAIL, REVIEW_ACCOUNT_CODE } = this.env;
-    return Boolean(REVIEW_ACCOUNT_EMAIL && REVIEW_ACCOUNT_CODE) && email === normalizeEmail(REVIEW_ACCOUNT_EMAIL!);
+    if (!REVIEW_ACCOUNT_EMAIL || !REVIEW_ACCOUNT_CODE) return false;
+    const allowed = REVIEW_ACCOUNT_EMAIL.split(',').map((e) => normalizeEmail(e.trim()));
+    return allowed.includes(email);
   }
 }

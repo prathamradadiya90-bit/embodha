@@ -33,7 +33,13 @@ const schema = z
     SMTP_PORT: z.coerce.number().int().positive().default(587),
     SMTP_USER: z.string().optional(),
     SMTP_PASS: z.string().optional(),
-    REVIEW_ACCOUNT_EMAIL: z.string().email().optional(),
+    REVIEW_ACCOUNT_EMAIL: z
+      .string()
+      .refine(
+        (val) => !val || val.split(',').every((e) => z.string().email().safeParse(e.trim()).success),
+        'must be a valid email or comma-separated emails',
+      )
+      .optional(),
     REVIEW_ACCOUNT_CODE: z.string().regex(/^\d{6}$/, 'must be six digits').optional(),
 
     BUNNY_STREAM_LIBRARY_ID: z.string().default(''),
